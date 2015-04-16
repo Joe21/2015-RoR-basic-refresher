@@ -1,6 +1,9 @@
 class SelectionsController < ApplicationController
 	def index
-		@selections = Selection.all
+		@appetizers = Selection.where(category: 'appetizer').order(name: :asc)
+		@entrees = Selection.where(category: 'entree').order(name: :asc)
+		# @entrees = @entrees.order(name: :asc)
+
 	end
 
 	def new
