@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  root 'selections#index'
+  resources :selections
+
+
+
+#           root GET    /                              selections#index
+#     selections GET    /selections(.:format)          selections#index
+#                POST   /selections(.:format)          selections#create
+#  new_selection GET    /selections/new(.:format)      selections#new
+# edit_selection GET    /selections/:id/edit(.:format) selections#edit
+#      selection GET    /selections/:id(.:format)      selections#show
+#                PATCH  /selections/:id(.:format)      selections#update
+#                PUT    /selections/:id(.:format)      selections#update
+#                DELETE /selections/:id(.:format)      selections#destroy
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
