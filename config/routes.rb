@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'selections#index'
-  resources :selections
+  
+  get '/' => 'selections#index'
 
 
 
