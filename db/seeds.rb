@@ -1,3 +1,10 @@
 Selection.create(name: 'Houseburger Deluxe', category: 'entree', description: 'A 12oz 100% angus beef burger cooked to your choice dressed with our signature sauce along with lettuce, tomato, pickle, grilled onions, and mushrooms. Served with a side of our house special cole slaw and curly fries.', cost: 9.65, price: 12.95, image_url: 'http://placehold.it/250x200')
 Selection.create(name: 'Pasta Olio Deluxe', category: 'entree', description: 'Your choice of spaghetti, linguine, bowtie, or penne sauteed in extra virgin olive oil with fresh garlic, spinach, grilled chicken, and shrimp.', cost: 10.25, price: 15.95, image_url: 'http://placehold.it/250x200')
-Selection.create(name: 'Veggie Platter', category: 'appetizer', description: 'A platter of steamed green beans, asparagus, fresh carrots, and fresh cucumbers served with our sweet and spicy honey sriratcha dipping sauce.', cost: 3.00, price: 6.95, image_url: 'http://placehold.it/250x200')
+Selection.create(name: 'Veggie Platter', category: 'appetizer', description: 'A platter of steamed green beans, asparagus, fresh carrots, and fresh cucumbers served with our sweet and spicy honey sriracha dipping sauce.', cost: 3.00, price: 6.95, image_url: 'http://placehold.it/250x200')
+Selection.create(name: 'Shrimp Tacos', category: 'entree', description: '2 grilled tortillas stuffed with fresh jumbo shrimp grilled in house chipotle sauce with fresh cilantro, tomatillos, avocado, and onions.', cost: 7.00, price: 10.95, image_url: 'http://placehold.it/250x200')
+Selection.create(name: 'Calamari', category: 'appetizer', description: 'A basket of fresh calamari tossed in our signature spice blend and deep friend to tender perfection. Served with a side of garlic marinara.', cost: 5.40, price: 9.00, image_url: 'http://placehold.it/250x200')
+Selection.create(name: 'Hot Fudge Sundae', category: 'dessert', description: 'Your choice of bowl of vanilla, chocolate, or strawberry soft serve ice cream topped with hot fudge, walnuts bits, and fresh cherry compote.', cost: 4.00, price: 6.75, image_url: 'http://placehold.it/250x200')
+Selection.create(name: 'Apple Pie', category: 'dessert', description: "A slice of our delicious apple pie. Baked fresh every morning and topped with a light glaze of organic agave nectar", cost: 2.20, price: 3.95, image_url: 'http://placehold.it/250x200')
+
+
+# db:migrate:reset 

@@ -1,4 +1,73 @@
 <h1>Menu</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Appetizers</th>
+		</tr>
+		<tr>
+			<th>Dish</th>
+			<th></th>
+			<th></th>
+			<th>Price</th>
+		</tr>
+	</thead>
 
-<% @selections.each do |selection| %>
-	<li></li>
+	<% @appetizers.each do |appetizer| %>
+	<tbody>
+		<td><%= appetizer.name %></td>
+		<td><%= appetizer.description %></td>
+		<td></td>
+		<td><%= number_to_currency(appetizer.price) %></td>
+	</tbody>
+	<% end %>
+</table>
+
+</br>
+
+<table>
+	<thead>
+		<tr>
+			<th>Entrees</th>
+		</tr>
+		<tr>
+			<th>Dish</th>
+			<th></th>
+			<th></th>
+			<th>Price</th>
+		</tr>
+	</thead>
+
+	<% @entrees.each do |entree| %>
+	<tbody>
+		<td><%= entree.name %></td>
+		<td><%= entree.description %></td>
+		<td></td>
+		<td><%= number_to_currency(entree.price) %></td>
+	</tbody>
+	<% end %>
+</table>
+
+</br>
+
+<table>
+	<thead>
+		<tr>
+			<th>Desserts</th>
+		</tr>
+		<tr>
+			<th>Dish</th>
+			<th></th>
+			<th></th>
+			<th>Price</th>
+		</tr>
+	</thead>
+
+	<% @desserts.each do |dessert| %>
+	<tbody>
+		<td><%= dessert.name %></td>
+		<td><%= dessert.description %></td>
+		<td></td>
+		<td><%= number_to_currency(dessert.price) %></td>
+	</tbody>
+	<% end %>
+</table>

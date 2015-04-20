@@ -2,36 +2,7 @@ class SelectionsController < ApplicationController
 	def index
 		@appetizers = Selection.where(category: 'appetizer').order(name: :asc)
 		@entrees = Selection.where(category: 'entree').order(name: :asc)
-		# @entrees = @entrees.order(name: :asc)
-
-	end
-
-	def new
-		@selection = Selection.new
-	end
-
-	def create
-		@selection = Selection.create(selection_param)
-		redirect_to root_path
-	end
-
-	def show
-		# id = params[:id]
-		# @selection = Selection.find(id)
-
-		# @selection = Selection.find(:id)
-	end
-
-	def edit
-		# id = params[:id]
-		# @selection = Selection.find(id)
-
-	end
-
-	def update
-	end
-
-	def destroy
+		@desserts = Selection.where(category: 'dessert').order(name: :asc)
 	end
 
 	# Strong params
