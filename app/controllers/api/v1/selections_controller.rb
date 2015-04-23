@@ -16,12 +16,11 @@ class API::V1::SelectionsController < ApplicationController
 
 		response['total_cost'] = total_metric(response['appetizer'].cost, response['entree'].cost, response['dessert'].cost)
 		response['total_price'] = total_metric(response['appetizer'].price, response['entree'].price, response['dessert'].price)
-		
+
 		respond_to do |format|
 			format.json { render :json => response }
 		end
 	end
-
 
 	#  Helper Methods
 	# ----------------------------------------------------------
