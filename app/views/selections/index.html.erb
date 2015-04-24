@@ -16,7 +16,7 @@
 	<tbody>
 		<td><%= appetizer.name %></td>
 		<td><%= appetizer.description %></td>
-		<td></td>
+		<td><%= image_tag appetizer.image_url %></td>
 		<td><%= number_to_currency(appetizer.price) %></td>
 	</tbody>
 	<% end %>
@@ -41,7 +41,7 @@
 	<tbody>
 		<td><%= entree.name %></td>
 		<td><%= entree.description %></td>
-		<td></td>
+		<td><%= image_tag entree.image_url %></td>
 		<td><%= number_to_currency(entree.price) %></td>
 	</tbody>
 	<% end %>
@@ -66,7 +66,7 @@
 	<tbody>
 		<td><%= dessert.name %></td>
 		<td><%= dessert.description %></td>
-		<td></td>
+		<td><%= image_tag dessert.image_url %></td>
 		<td><%= number_to_currency(dessert.price) %></td>
 	</tbody>
 	<% end %>

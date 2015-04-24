@@ -1,5 +1,6 @@
 class API::V1::SelectionsController < ApplicationController
 
+	# public API accessible at /v1/selections
 	def index
 		selections = Selection.all
 
@@ -8,6 +9,7 @@ class API::V1::SelectionsController < ApplicationController
 		end
 	end
 
+	# public api accessible at /v1/selections/random_meal
 	def random_meal
 		response = {}
 		response['appetizer'] = random_appetizer()
