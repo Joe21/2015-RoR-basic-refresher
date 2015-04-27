@@ -3,11 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-	margin: 10px;
+	margin: 15px;
+
+	body {
+		background-color: #AAC6FA; 
+	}
+
+	img {
+		height: 80px;
+		width: 100px;
+	}
 }
 
 #main-header {
-	color: green;
 	text-align: center;
 }
 
@@ -17,7 +25,7 @@ html {
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #AAC6FA;
+  background-color: #FFFFFF;
 }
 
 .th-text-align-center{
@@ -41,4 +49,8 @@ td {
 			width: 33%;
 		}
 	}
+}
+
+.td-no-padding {
+	padding: 0 !important;
 }
