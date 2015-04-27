@@ -1,21 +1,30 @@
 <h1 id="main-header">Menu</h1>
-<table>
+
+<h2 class="course-header">Appetizers
+	<span class="total-container">(Total: <%= @appetizers.count %>)</span>
+</h2>	
+<table class="table table-bordered table-hover">
 	<thead>
 		<tr>
-			<th>Appetizers</th>
-		</tr>
-		<tr>
-			<th>Dish</th>
-			<th></th>
-			<th></th>
-			<th>Price</th>
+			<th class="th-text-align-center">Dish</th>
+			<th class="th-text-align-center">Description</th>
+			<th class="th-text-align-center">Image</th>
+			<th class="th-text-align-center">Price</th>
 		</tr>
 	</thead>
 
 	<% @appetizers.each do |appetizer| %>
 	<tbody>
 		<td><%= appetizer.name %></td>
-		<td><%= appetizer.description %></td>
+		<div>
+			<td>
+				<%= appetizer.description %>
+				<div class="selection-option-menu">
+					<button type="button" class="btn btn-info">Edit</button>
+					<button type="button" class="btn btn-danger">Delete</button>
+				</div>
+			</td>
+		</div>
 		<td><%= image_tag appetizer.image_url %></td>
 		<td><%= number_to_currency(appetizer.price) %></td>
 	</tbody>
@@ -24,23 +33,31 @@
 
 </br>
 
-<table>
+<h2 class="course-header">Entrees
+	<span class="total-container">(Total: <%= @entrees.count %>)</span>
+</h2>	
+<table class="table table-bordered table-hover">
 	<thead>
 		<tr>
-			<th>Entrees</th>
-		</tr>
-		<tr>
-			<th>Dish</th>
-			<th></th>
-			<th></th>
-			<th>Price</th>
+			<th class="th-text-align-center">Dish</th>
+			<th class="th-text-align-center">Description</th>
+			<th class="th-text-align-center">Image</th>
+			<th class="th-text-align-center">Price</th>
 		</tr>
 	</thead>
 
 	<% @entrees.each do |entree| %>
 	<tbody>
 		<td><%= entree.name %></td>
-		<td><%= entree.description %></td>
+		<div>
+			<td>
+				<%= entree.description %>
+				<div class="selection-option-menu">
+					<button type="button" class="btn btn-info">Edit</button>
+					<button type="button" class="btn btn-danger">Delete</button>
+				</div>
+			</td>
+		</div>
 		<td><%= image_tag entree.image_url %></td>
 		<td><%= number_to_currency(entree.price) %></td>
 	</tbody>
@@ -49,23 +66,31 @@
 
 </br>
 
-<table>
+<h2 class="course-header">Desserts
+	<span class="total-container">(Total: <%= @entrees.count %>)</span>
+</h2>	
+<table class="table table-bordered table-hover">
 	<thead>
 		<tr>
-			<th>Desserts</th>
-		</tr>
-		<tr>
-			<th>Dish</th>
-			<th></th>
-			<th></th>
-			<th>Price</th>
+			<th class="th-text-align-center">Dish</th>
+			<th class="th-text-align-center">Description</th>
+			<th class="th-text-align-center">Image</th>
+			<th class="th-text-align-center">Price</th>
 		</tr>
 	</thead>
 
 	<% @desserts.each do |dessert| %>
 	<tbody>
 		<td><%= dessert.name %></td>
-		<td><%= dessert.description %></td>
+		<div>
+			<td>
+				<%= dessert.description %>
+				<div class="selection-option-menu">
+					<button type="button" class="btn btn-info">Edit</button>
+					<button type="button" class="btn btn-danger">Delete</button>
+				</div>
+			</td>
+		</div>
 		<td><%= image_tag dessert.image_url %></td>
 		<td><%= number_to_currency(dessert.price) %></td>
 	</tbody>

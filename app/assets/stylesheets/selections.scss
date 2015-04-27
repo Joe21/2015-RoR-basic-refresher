@@ -11,3 +11,34 @@ html {
 	text-align: center;
 }
 
+.total-container {
+	font-size: .6em;
+	vertical-align: middle;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #AAC6FA;
+}
+
+.th-text-align-center{
+	text-align: center;
+}
+
+td {
+	position: relative;
+
+	.selection-option-menu {
+		position: absolute;
+		width: 50%;
+		left: 25%;
+		height: 36px;
+		bottom: 10px;
+
+		// Used to align buttons within
+		text-align: center;
+
+		button {
+			width: 33%;
+		}
+	}
+}
