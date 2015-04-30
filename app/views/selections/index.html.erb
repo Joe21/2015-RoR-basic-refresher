@@ -1,5 +1,4 @@
 <h1 id="main-header">Menu</h1>
-
 <h3 class="course-header">Appetizers
 	<span class="total-container">(Total: <%= @appetizers.count %>)</span>
 </h3>	
@@ -19,10 +18,10 @@
 		<div>
 			<td>
 				<%= appetizer.description %>
-				<div class="selection-option-menu">
+<!-- 				<div class="selection-option-menu">
 					<button type="button" class="btn btn-info">Edit</button>
 					<button type="button" class="btn btn-danger">Delete</button>
-				</div>
+				</div> -->
 			</td>
 		</div>
 		<td class="td-no-padding"><%= image_tag appetizer.image_url %></td>
@@ -31,7 +30,7 @@
 	<% end %>
 </table>
 
-</br>
+<hr>
 
 <h3 class="course-header">Entrees
 	<span class="total-container">(Total: <%= @entrees.count %>)</span>
@@ -64,7 +63,7 @@
 	<% end %>
 </table>
 
-</br>
+<hr>
 
 <h3 class="course-header">Desserts
 	<span class="total-container">(Total: <%= @entrees.count %>)</span>

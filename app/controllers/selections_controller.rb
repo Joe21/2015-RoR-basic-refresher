@@ -5,6 +5,24 @@ class SelectionsController < ApplicationController
 		@desserts = Selection.where(category: 'dessert').order(name: :asc)
 	end
 
+	def new
+	end
+
+	def create
+	end
+
+	def show
+	end
+
+	def edit
+	end
+
+	def update
+	end
+
+	def destroy
+	end
+
 	# Strong params
 	private
 	def selection_params
