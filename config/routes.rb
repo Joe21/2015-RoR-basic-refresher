@@ -14,7 +14,7 @@ end
 # ############
 # Rake Routes
 # ############
-#                          root GET    /                                        selections#index
+# 												 root GET    /                                        selections#index
 #                    selections GET    /selections(.:format)                    selections#index
 #                               POST   /selections(.:format)                    selections#create
 #                 new_selection GET    /selections/new(.:format)                selections#new

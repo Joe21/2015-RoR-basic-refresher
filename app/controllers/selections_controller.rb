@@ -17,10 +17,11 @@ class SelectionsController < ApplicationController
 		@selection = Selection.find_by(name: name)
 	end
 
-	def edit
-	end
-
 	def update
+		name = params[:id]
+		@selection = Selection.find_by(name: name)
+		@selection.update_attributes!(selection_params)
+		redirect_to root_path
 	end
 
 	def destroy
