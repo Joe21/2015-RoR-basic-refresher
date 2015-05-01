@@ -42,26 +42,10 @@ html {
 	text-align: center;
 }
 
-td {
-	position: relative;
-
-	.selection-option-menu {
-		position: absolute;
-		width: 50%;
-		left: 25%;
-		height: 36px;
-		bottom: 10px;
-		overflow: hidden;
-
-		// Used to align buttons within
-		text-align: center;
-
-		button {
-			width: 33%;
-		}
-	}
-}
-
 .td-no-padding {
 	padding: 0 !important;
+}
+
+.form-center {
+	text-align: center;
 }

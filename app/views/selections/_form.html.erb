@@ -1,0 +1,12 @@
+<%= simple_form_for @selection, url: "http://nfl.com", html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
+	<%= f.error_notification %>
+	<%= f.input :name, inline_label: 'bla' %>
+	<%= f.input :category %>
+	<%= f.input :description, :as => :text %>
+	<%= f.input :cost %>
+	<%= f.input :price %>
+	<%= f.input :image_url, :as => :text%>
+	<div class="form-center">
+		<%= f.button :submit %>
+	</div>
+<% end %>

@@ -14,16 +14,16 @@
 
 	<% @appetizers.each do |appetizer| %>
 	<tbody>
-		<td><%= appetizer.name %></td>
-		<div>
-			<td>
-				<%= appetizer.description %>
-<!-- 				<div class="selection-option-menu">
-					<button type="button" class="btn btn-info">Edit</button>
-					<button type="button" class="btn btn-danger">Delete</button>
-				</div> -->
-			</td>
-		</div>
+		<td>
+			<%= appetizer.name %>
+			<br>
+			<div class="btn-group">
+				<%= link_to('Edit', selection_path(appetizer.name), :class => 'btn btn-xs btn-info') %>
+				<br>
+				<%= link_to('Delete', 'http://www.nfl.com', :class => 'btn btn-xs btn-danger') %>
+			</div>
+		</td>
+		<td><%= appetizer.description %></td>
 		<td class="td-no-padding"><%= image_tag appetizer.image_url %></td>
 		<td><%= number_to_currency(appetizer.price) %></td>
 	</tbody>
@@ -47,16 +47,15 @@
 
 	<% @entrees.each do |entree| %>
 	<tbody>
-		<td><%= entree.name %></td>
-		<div>
-			<td>
-				<%= entree.description %>
-				<div class="selection-option-menu">
-					<button type="button" class="btn btn-info">Edit</button>
-					<button type="button" class="btn btn-danger">Delete</button>
-				</div>
-			</td>
-		</div>
+		<td>
+			<%= entree.name %>
+			<br>
+			<div class="btn-group">
+				<%= link_to('Edit', selection_path(entree.name), :class => 'btn btn-xs btn-info') %>
+				<%= link_to('Delete', 'http://www.nfl.com', :class => 'btn btn-xs btn-danger') %>
+			</div>
+		</td>
+		<td><%= entree.description %></td>
 		<td class="td-no-padding"><%= image_tag entree.image_url %></td>
 		<td><%= number_to_currency(entree.price) %></td>
 	</tbody>
@@ -80,16 +79,15 @@
 
 	<% @desserts.each do |dessert| %>
 	<tbody>
-		<td><%= dessert.name %></td>
-		<div>
-			<td>
-				<%= dessert.description %>
-				<div class="selection-option-menu">
-					<button type="button" class="btn btn-info">Edit</button>
-					<button type="button" class="btn btn-danger">Delete</button>
-				</div>
-			</td>
-		</div>
+		<td>
+			<%= dessert.name %>
+			<br>
+			<div class="btn-group">
+				<%= link_to('Edit', selection_path(dessert.name), :class => 'btn btn-xs btn-info') %>
+				<%= link_to('Delete', 'http://www.nfl.com', :class => 'btn btn-xs btn-danger') %>
+			</div>
+		</td>
+		<td><%= dessert.description %></td>
 		<td class="td-no-padding"><%= image_tag dessert.image_url %></td>
 		<td><%= number_to_currency(dessert.price) %></td>
 	</tbody>

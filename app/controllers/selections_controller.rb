@@ -11,7 +11,10 @@ class SelectionsController < ApplicationController
 	def create
 	end
 
+	# Note that ID is not displayed in routing and replaced via :name (refer to selection.rb)
 	def show
+		name = params[:id]
+		@selection = Selection.find_by(name: name)
 	end
 
 	def edit

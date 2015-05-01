@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.4'
+gem 'simple_form'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
