@@ -21,8 +21,8 @@
 			<%= appetizer.name %>
 			<br>
 			<div class="btn-group">
-				<%= link_to('Edit', selection_path(appetizer.name), :class => 'btn btn-xs btn-info') %>
-				<%= link_to('Delete', 'http://www.nfl.com', :class => 'btn btn-xs btn-danger') %>
+				<%= link_to('Edit', edit_selection_path(appetizer.name), :class => 'btn btn-xs btn-info') %>
+				<%= link_to('Delete', selection_path(appetizer.name), :class => 'btn btn-xs btn-danger') %>
 			</div>
 		</td>
 		<td><%= appetizer.description %></td>
@@ -53,8 +53,8 @@
 			<%= entree.name %>
 			<br>
 			<div class="btn-group">
-				<%= link_to('Edit', selection_path(entree.name), :class => 'btn btn-xs btn-info') %>
-				<%= link_to('Delete', 'http://www.nfl.com', :class => 'btn btn-xs btn-danger') %>
+				<%= link_to('Edit', edit_selection_path(entree.name), :class => 'btn btn-xs btn-info') %>
+				<%= link_to('Delete', selection_path(entree.name), :class => 'btn btn-xs btn-danger') %>
 			</div>
 		</td>
 		<td><%= entree.description %></td>
@@ -85,8 +85,8 @@
 			<%= dessert.name %>
 			<br>
 			<div class="btn-group">
-				<%= link_to('Edit', selection_path(dessert.name), :class => 'btn btn-xs btn-info') %>
-				<%= link_to('Delete', 'http://www.nfl.com', :class => 'btn btn-xs btn-danger') %>
+				<%= link_to('Edit', edit_selection_path(dessert.name), :class => 'btn btn-xs btn-info') %>
+				<%= link_to('Delete', selection_path(dessert.name), :class => 'btn btn-xs btn-danger') %>
 			</div>
 		</td>
 		<td><%= dessert.description %></td>

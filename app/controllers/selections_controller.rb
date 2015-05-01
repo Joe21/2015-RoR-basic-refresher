@@ -19,7 +19,7 @@ class SelectionsController < ApplicationController
 	end
 
 	# Note that ID is not displayed in routing and replaced via :name (refer to selection.rb)
-	def show
+	def edit
 		name = params[:id]
 		@selection = Selection.find_by(name: name)
 	end
