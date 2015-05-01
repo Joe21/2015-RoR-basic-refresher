@@ -1,12 +1,34 @@
-<%= simple_form_for @selection, url: selection_path(selection.name), html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
-	<%= f.error_notification %>
-	<%= f.input :name, inline_label: 'bla' %>
-	<%= f.input :category %>
-	<%= f.input :description, :as => :text %>
-	<%= f.input :cost %>
-	<%= f.input :price %>
-	<%= f.input :image_url, :as => :text%>
-	<div class="form-center">
-		<%= f.button :submit, method: :put %>
-	</div>
+<% if @selection.created_at %>
+
+<!-- Simple form for edit/update -->
+	<%= simple_form_for @selection, url: selection_path(selection.name), html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
+		<%= f.error_notification %>
+		<%= f.input :name, inline_label: 'bla' %>
+		<%= f.input :category %>
+		<%= f.input :description, :as => :text %>
+		<%= f.input :cost %>
+		<%= f.input :price %>
+		<%= f.input :image_url, :as => :text%>
+		<div class="form-center">
+			<%= f.button :submit, method: :PUT %>
+		</div>
+		<h1>Edit</h1>
+	<% end %>
+<% else %>
+
+	<!-- Simple form for new/create -->
+	<%= simple_form_for @selection, url: selections_path, html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
+		<%= f.error_notification %>
+		<%= f.input :name, inline_label: 'bla' %>
+		<%= f.input :category %>
+		<%= f.input :description, :as => :text %>
+		<%= f.input :cost %>
+		<%= f.input :price %>
+		<%= f.input :image_url, :as => :text%>
+		<div class="form-center">
+			<%= f.button :submit, method: :POST %>
+		</div>
+		<h1>New</h1>
+	<% end %>
+
 <% end %>

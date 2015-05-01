@@ -6,9 +6,16 @@ class SelectionsController < ApplicationController
 	end
 
 	def new
+		@selection = Selection.new(name: 'New Selection')
+
+		puts '============'
+		puts @selection.created_at
+		puts '============'
 	end
 
 	def create
+		@selection = Selection.create(selection_params)
+		redirect_to root_path
 	end
 
 	# Note that ID is not displayed in routing and replaced via :name (refer to selection.rb)
@@ -25,6 +32,10 @@ class SelectionsController < ApplicationController
 	end
 
 	def destroy
+		name = params[:id]
+		selection = Selection.find_by(name: name)
+		selection.destroy
+		redirect_to root_path
 	end
 
 	# Strong params
