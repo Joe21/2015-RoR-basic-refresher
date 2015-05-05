@@ -1,5 +1,5 @@
 class API::V1::SelectionsController < ApplicationController
-	skip_before_filter :verify_authenticity_token, :only => [:random_meal_with_appetizer]
+	skip_before_filter :verify_authenticity_token, :only => [:random_meal_with_selection]
 
 	# public API accessible at /api/v1/selections
 	def index
@@ -34,15 +34,33 @@ class API::V1::SelectionsController < ApplicationController
 		end
 	end
 
-	def random_meal_with_appetizer
-		#  Redesign appetizer id validation. call counts add to range. check if within. then boom
+	# Accepts POST requests at /selections/random_meal_with_selection
+	def random_meal_with_selection
+		# [NOTE] NEEDS VALIDATION and EXCEPTION HANDLING
+		selection = Selection.find(params['selection_id'])
+		response = {}
+		response['status'] = "success"
+		response['type'] = "Random 3 course meal"
+		response['total_cost'] = 0
+		response['total_price'] = 0
 
-		if Selection.find(params['appetizer_id'])
-			appetizer = Selection.find(params['appetizer_id'])
-			response = appetizer.name
-		else
-			response = "Error, invalid appetizer."
+		case selection.category
+		when "appetizer"
+			response['appetizer'] = selection
+			response['entree'] = random_entree()
+			response['dessert'] = random_dessert()
+		when "entree"
+			response['appetizer'] = random_appetizer()
+			response['entree'] = selection
+			response['dessert'] = random_dessert()
+		else "dessert"
+			response['appetizer'] = random_appetizer()
+			response['entree'] = random_entree()
+			response['dessert'] = selection
 		end
+
+		response['total_cost'] = total_metric(response['appetizer'].cost, response['entree'].cost, response['dessert'].cost)
+		response['total_price'] = total_metric(response['appetizer'].price, response['entree'].price, response['dessert'].price)
 
 		respond_to do |format|
 			format.json { render :json => response }
