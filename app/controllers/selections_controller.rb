@@ -4,19 +4,20 @@ class SelectionsController < ApplicationController
 		@entrees = Selection.where(category: 'entree').order(name: :asc)
 		@desserts = Selection.where(category: 'dessert').order(name: :asc)
 
-		puts "============="
-		puts current_user
-		puts "============="
-
+		if current_user
+			puts "============="
+			puts "logged in"
+			puts "============="
+		else
+			puts "============="
+			puts "logged out"
+			puts "============="
+		end
 
 	end
 
 	def new
 		@selection = Selection.new(name: 'New Selection')
-
-		puts '============'
-		puts @selection.created_at
-		puts '============'
 	end
 
 	def create
