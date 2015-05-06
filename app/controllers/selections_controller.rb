@@ -3,6 +3,12 @@ class SelectionsController < ApplicationController
 		@appetizers = Selection.where(category: 'appetizer').order(name: :asc)
 		@entrees = Selection.where(category: 'entree').order(name: :asc)
 		@desserts = Selection.where(category: 'dessert').order(name: :asc)
+
+		puts "============="
+		puts current_user
+		puts "============="
+
+
 	end
 
 	def new
