@@ -1,6 +1,6 @@
 # Menu Manager App
 
-Menu Manager is a RoR application I created to play around with on rails. The basic premise was to create a CRUD app featuring various food selections and built upon that application with more technologies and features. Further details and documentation to come...
+Menu Manager is a RoR application I created to play around with rails. The premise was actually a quick demo to teach basic SQL to a friend but I figured I run with it and see where it can lead. Further details and documentation to come...
 
 **Stack**
 * Ruby 2.2.1 on Rails 4.2.1
@@ -11,7 +11,7 @@ Menu Manager is a RoR application I created to play around with on rails. The ba
 
 **Functionality & Fun**
 * CRUD functionality for selection model.
-* Facebook authentication required to access Admin (Create, Edit, Delete) priviledges.
+* Facebook authentication required to access Admin (Create, Edit, Delete) privileges.
 * Namespaced RESTful routing.
 * Decided to explore ways to avoid exposing database ID's on the URL for routing. The current structure overrides to_param to model name. 
 	* This works for now but I'm not too thrilled breaking away from convention for this model across the entire app as it could seriously complicate interactions with other gems and scaleability. For future reference, something like FriendlyID gem sounds like a nice tool to look into.
