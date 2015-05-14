@@ -1,6 +1,10 @@
 <h1 id="main-header">Menu</h1>
 
-<%= link_to('New Selection', new_selection_path, :class => 'btn btn-xs btn-info') %>
+<% if current_user %>
+	<%= link_to('Add new selection to menu', new_selection_path, :class => 'btn btn-xs btn-info') %>
+<% else %>
+	<%= link_to('Add new selection to menu', new_selection_path, :class => 'btn btn-xs btn-info', :disabled => true) %>
+<% end %>
 
 <h3 class="course-header">Appetizers
 	<span class="total-container">(Total: <%= @appetizers.count %>)</span>
