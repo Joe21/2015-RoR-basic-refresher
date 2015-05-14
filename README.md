@@ -2,14 +2,14 @@
 
 Menu Manager is a RoR application I created to play around with on rails. The basic premise was to create a CRUD app featuring various food selections and built upon that application with more technologies and features. Further details and documentation to come...
 
-** Stack **
+**Stack**
 * Ruby 2.2.1 on Rails 4.2.1
 * PostgreSQL DB
 * Bootstrap SASS
 * Omniauth-Facebook
 * Simple Forms
 
-** Functionality & Fun **
+**Functionality & Fun**
 * CRUD functionality for selection model.
 * Facebook authentication required to access Admin (Create, Edit, Delete) priviledges.
 * Namespaced RESTful routing.
@@ -26,7 +26,7 @@ GET | /api/v1/selections/index | Returns JSON of all menu selections
 GET | /api/v1/selections/random_meal | Returns JSON of randomly created 3 course meal along with total cost and price of the randomized meal
 POST | /api/v1/selections/random_meal_with | Upon successfully receiving POST request with a valid selection_id, returns JSON of randomly created 3 course meal built around the desired selection. Includes cost and price metrics as well.
 
-** WIP Tasks ***
+**WIP Tasks***
 * Back end validation
 * Front end form validation
 * Clean up CSS / SASS
