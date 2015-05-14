@@ -7,6 +7,7 @@ html {
 
 	body {
 		background-color: #AAC6FA;
+		margin-top: 40px;
 	}
 
 	img {
@@ -48,4 +49,24 @@ html {
 
 .form-center {
 	text-align: center;
+}
+
+#header-navbar {
+	padding: 10px;
+	vertical-align: middle;
+
+	a {
+		position: absolute;
+		right: 10px;
+	}
+}
+
+.navbar {
+	min-height: 40px;
+	margin-bottom: 0;
+	border-bottom: 1px solid black;
+}
+
+.left-align {
+	text-align: left;
 }

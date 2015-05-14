@@ -26,14 +26,18 @@
 	</script>
 
 <!-- 	<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="false"></div> -->
-<div id="user_nav">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fullwidth" id="header-navbar">
   <% if current_user %>
-    <h1>I"m logged in</h1>
+  	<span class="left-align">Signed in as <%= current_user.name %></span>
     <%= link_to "Sign out", logout_path, id: "sign_out" %>
   <% else %>
+  	<span class="left-align">Please sign in with Facebook to access Admin priviledges</span>
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-  <% end %>
-</div>
+  <% end %>		
+	</div>
+</nav>
 
 <%= yield %>
 
