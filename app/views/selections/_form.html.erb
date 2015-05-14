@@ -10,9 +10,9 @@
 		<%= f.input :price %>
 		<%= f.input :image_url, :as => :text%>
 		<div class="form-center">
+			<%= link_to "Back", :back %>
 			<%= f.button :submit, method: :PUT %>
 		</div>
-		<h1>Edit</h1>
 	<% end %>
 <% else %>
 
@@ -26,9 +26,9 @@
 		<%= f.input :price %>
 		<%= f.input :image_url, :as => :text%>
 		<div class="form-center">
+			<%= link_to "Back", :back %>
 			<%= f.button :submit, method: :POST %>
 		</div>
-		<h1>New</h1>
 	<% end %>
 
 <% end %>
