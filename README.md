@@ -1,6 +1,9 @@
 # Menu Manager App
 
-A sample rails app.
+Menu Manager is a RoR application I created to play around with on rails. The basic premise was to create a CRUD app featuring various food selections and built upon that application with more technologies and features. Further details and documentation to come...
+
+
+
 
 
 REQUEST | URI | DESCRIPTION

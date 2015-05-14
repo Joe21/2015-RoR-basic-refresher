@@ -3,17 +3,6 @@ class SelectionsController < ApplicationController
 		@appetizers = Selection.where(category: 'appetizer').order(name: :asc)
 		@entrees = Selection.where(category: 'entree').order(name: :asc)
 		@desserts = Selection.where(category: 'dessert').order(name: :asc)
-
-		if current_user
-			puts "============="
-			puts "logged in"
-			puts "============="
-		else
-			puts "============="
-			puts "logged out"
-			puts "============="
-		end
-
 	end
 
 	def new
